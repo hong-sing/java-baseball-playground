@@ -29,6 +29,7 @@ ex) git checkout -b apply-feedback
 
 기능 목록
 1. 컴퓨터 3자리 숫자 생성 (컴퓨터)
+   1. 1 ~ 9 사이의 랜덤숫자 생성
 2. 사용자 3자리 숫자 입력 (inputview)
 3. 사용자 3자리 숫자 분리 (inputview)
 4. 스트라이크 판별 (숫자야구게임)
