@@ -33,5 +33,10 @@ public class Game {
     boolean isStrike(int computer, int user) {
         return computer == user;
     }
+
+    // 볼 판별
+    boolean isBall(int computer1, int computer2, int user) {
+        return computer1 == user || computer2 == user;
+    }
 }
 
