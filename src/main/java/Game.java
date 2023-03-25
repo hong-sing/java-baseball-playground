@@ -28,5 +28,10 @@ public class Game {
         int randomNum = (int) (Math.random() * 9) + 1;
         return randomNum;
     }
+
+    // 스트라이크 판별
+    boolean isStrike(int computer, int user) {
+        return computer == user;
+    }
 }
 

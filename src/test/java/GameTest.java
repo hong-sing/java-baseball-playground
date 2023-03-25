@@ -30,4 +30,13 @@ class GameTest {
         assertThat(arr[1]).isGreaterThanOrEqualTo(1).isLessThanOrEqualTo(9);
         assertThat(arr[2]).isGreaterThanOrEqualTo(1).isLessThanOrEqualTo(9);
     }
+
+    @DisplayName("스트라이크_판별")
+    @Test
+    public void isStrike() {
+        int computer = 2;
+        int user = 2;
+
+        assertThat(game.isStrike(computer, user)).isTrue();
+    }
 }
