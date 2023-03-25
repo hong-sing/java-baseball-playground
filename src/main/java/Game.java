@@ -55,5 +55,29 @@ public class Game {
         }
         return 0;
     }
+
+    // 총 볼 갯수
+    int ballCount(int[] computer, int[] user) {
+        int x = 0;
+        for (int i = 0; i < 3; i++) {
+            x += addBallCount(computer, user, i);
+        }
+        return x;
+    }
+
+    // 볼 카운트
+    public int addBallCount(int[] computer, int[] user, int i) {
+        if (isStrike(computer[i], user[i])) return 0;
+        if (i == 0 && isBall(computer[1], computer[2], user[0])) {
+            return 1;
+        }
+        if (i == 1 && isBall(computer[0], computer[2], user[1])) {
+            return 1;
+        }
+        if (i == 2 && isBall(computer[1], computer[0], user[2])) {
+            return 1;
+        }
+        return 0;
+    }
 }
 
