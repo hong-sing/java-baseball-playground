@@ -38,5 +38,22 @@ public class Game {
     boolean isBall(int computer1, int computer2, int user) {
         return computer1 == user || computer2 == user;
     }
+
+    // 총 스트라이크 갯수
+    int strikeCount(int[] computer, int[] user) {
+        int count = 0;
+        for (int i = 0; i < 3; i++) {
+            count += addStrikeCount(computer[i], user[i]);
+        }
+        return count;
+    }
+
+    // 스트라이크 카운트
+    int addStrikeCount(int computer, int user) {
+        if (isStrike(computer, user)) {
+            return 1;
+        }
+        return 0;
+    }
 }
 
